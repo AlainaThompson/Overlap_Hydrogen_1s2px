@@ -12,6 +12,7 @@ class OverlapInt: NSObject,ObservableObject {
   
     let e = Darwin.M_E
     var atomicSpacing = 0.0
+    //a = bohr radius
     var a = 0.529177
     var n = 0.0
     @Published var S = 0.0
@@ -53,7 +54,7 @@ class OverlapInt: NSObject,ObservableObject {
     
     
     func calculateS(R: Double) async -> Double {
-        
+        // integral for 1s and 2px adds an additional R/a to the integral
     
         //          - R /  a                   2
         //                            R       R     R
